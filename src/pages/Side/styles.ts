@@ -12,10 +12,15 @@ export const Container = styled.div<Props>`
   background-color: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.secondary};
   padding-bottom: 50px;
+  backface-visibility: hidden;
+  perspective: 1000;
   animation: ${({ entrace }) =>
     entrace !== 'animated' ? undefined : 'fade 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both'};
 
   > div:nth-child(2) {
+    backface-visibility: hidden;
+    perspective: 1000;
+
     animation: ${({ entrace }) =>
       entrace !== 'animated'
         ? undefined
@@ -24,25 +29,37 @@ export const Container = styled.div<Props>`
 
   @keyframes fade {
     0% {
+      transform: translate3d(0, 0, 0);
+      transform: translateZ(0);
       opacity: 0.5;
+      will-change: transform;
     }
     100% {
+      transform: translate3d(0, 0, 0);
+      transform: translateZ(0);
       opacity: 1;
+      will-change: transform;
     }
   }
 
   @keyframes showIn {
     0% {
+      transform: translate3d(0, 0, 0);
+      transform: translateZ(0);
       transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
       transform-origin: 50% 100%;
-      filter: blur(40px);
+      filter: blur(20px);
       opacity: 0;
+      will-change: transform;
     }
     100% {
+      transform: translate3d(0, 0, 0);
+      transform: translateZ(0);
       transform: translateY(0) scaleY(1) scaleX(1);
       transform-origin: 50% 50%;
       filter: blur(0);
       opacity: 1;
+      will-change: transform;
     }
   }
 `;

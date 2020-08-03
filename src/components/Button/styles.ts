@@ -27,11 +27,11 @@ export const ButtonBase = styled.button.attrs((props) => ({
   }
 
   &:hover {
-    transform: perspective(1px) scale(1.1);
+    transform: perspective(1px) scale(1.05);
   }
 
   &:disabled {
     cursor: wait;
-    opacity: 0.8;
+    opacity: 0.9;
   }
 `;
