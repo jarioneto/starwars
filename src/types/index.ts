@@ -9,6 +9,7 @@ export interface SideContext {
   side: Side;
   setSide: (side: Side) => void;
 }
+
 export interface Person {
   name: string;
   avatar: string;
