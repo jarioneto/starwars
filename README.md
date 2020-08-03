@@ -1,44 +1,56 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Star Wars
 
-In the project directory, you can run:
+![CI](https://github.com/jarioneto/starwars/workflows/CI/badge.svg?branch=master)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f1c268a8-67d4-4a2f-b546-2977f9bf64a9/deploy-status)](https://app.netlify.com/sites/iclinic-starwars/deploys)
+![react](https://img.shields.io/github/package-json/dependency-version/jarioneto/starwars/react)
+![typescript](https://img.shields.io/github/package-json/dependency-version/jarioneto/starwars/dev/typescript)
 
-### `yarn start`
+Aplicação desenvolvida em [ReactJS](https://pt-br.reactjs.org/) para consumo da API [Swapi](https://swapi.dev/)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Configurar ambiente
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Criar cópia do arquivo .env.example e configurar a variável REACT_APP_API_URL com o URL da API
 
-### `yarn test`
+```bash
+cp .env.example .env
+```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Obs: A API https://swapi.dev/api/ apresentou problemas de CORS, como susgestão recomenda-se o uso de um proxy. Ex: https://cors-anywhere.herokuapp.com/https://swapi.dev/api/
 
-### `yarn build`
+### Instalar dependências
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+yarn
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Executar em modo de desenvolvimento
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+yarn start
+```
 
-### `yarn eject`
+### Executar linter do código
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+yarn lint
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Criar build para ambiente produção
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+yarn build
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Executar testes
 
-## Learn More
+```bash
+yarn test
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Verificar cobertura do código
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+yarn coverage
+```
+
