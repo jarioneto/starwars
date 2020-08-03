@@ -6,25 +6,54 @@
 ![react](https://img.shields.io/github/package-json/dependency-version/jarioneto/starwars/react)
 ![typescript](https://img.shields.io/github/package-json/dependency-version/jarioneto/starwars/typescript)
 
-Aplicação desenvolvida em [ReactJS](https://pt-br.reactjs.org/) para consumo da API [Swapi](https://swapi.dev/)
+Aplicação desenvolvida para consumo da API [Swapi](https://swapi.dev/)
 
-### Configurar ambiente
+Stack utilizada no desenvolvimento:
+* TypeScript
+* React
+* Styled Components
+* Jest
+* React Testing Library
+* ESlint
+* Prettier
+* Continuos Integration
+  * Github Actions (**build, lint, coverage**)
 
-Criar cópia do arquivo .env.example e configurar a variável REACT_APP_API_URL com o URL da API
+# Configuração inicial
+
+Execute os passos abaixo para realizar a configuração inicial da aplicação.
+
+
+### Variáveis de ambiente
+
+Crie uma cópia do arquivo .env.example e e renomeie para .env
 
 ```bash
 cp .env.example .env
 ```
 
-Obs: A API https://swapi.dev/api/ apresentou problemas de CORS, como susgestão recomenda-se o uso de um proxy. Ex: https://cors-anywhere.herokuapp.com/https://swapi.dev/api/
+Edite o arquivo criado no passo anterior e informe a URL da API
+```bash
+REACT_APP_API_URL=https://swapi.dev/api/
+```
+
+**Observação**: Durante o desenvolvimento da aplicação a API [Swapi](https://swapi.dev/api/) apresentou problemas de **CORS**, como sugestão recomenda-se o uso de um proxy, como mostra o exemplo abaixo.
+
+```bash
+REACT_APP_API_URL=https://cors-anywhere.herokuapp.com/https://swapi.dev/api/
+```
 
 ### Instalar dependências
+
+Para instalar as dependências da aplicação execute o comando abaixo:
 
 ```bash
 yarn
 ```
 
-### Executar em modo de desenvolvimento
+# Scripts disponíveis
+
+### Execução em modo de desenvolvimento
 
 ```bash
 yarn start
@@ -36,7 +65,7 @@ yarn start
 yarn lint
 ```
 
-### Criar build para ambiente produção
+### Criar build de produção
 
 ```bash
 yarn build
