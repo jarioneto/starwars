@@ -38,13 +38,15 @@ const Side: FC = () => {
   const context = useContext(SideContext.Context);
   const history = useHistory();
 
+  const entrace = loading ? 'static' : 'animated';
+
   useEffect(() => {
     if (context?.side) {
       const currentSide = context.side;
       const currentTheme = Sides.light === currentSide ? themes.light : themes.dark;
 
       const currentPerson: PersonType = {
-        name: Sides.light === currentSide ? 'Luke Skywalker' : 'Dart Vader',
+        name: Sides.light === currentSide ? 'Luke Skywalker' : 'Darth Vader',
         avatar: Sides.light === currentSide ? avatarLuke : avatarDarth
       };
 
@@ -77,7 +79,7 @@ const Side: FC = () => {
   return (
     side && (
       <ThemeContext.Provider value={theme}>
-        <Container loading={loading}>
+        <Container entrace={entrace}>
           <Header>
             <Arrow onClick={goBack} role="button" />
             <span>back</span>

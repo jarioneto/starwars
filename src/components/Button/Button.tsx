@@ -7,7 +7,7 @@ import Loader from 'components/Loader';
 import { ButtonBase } from './styles';
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
-  loading: boolean;
+  loading?: boolean;
 }
 
 const Button: FC<Props> = ({ loading, children, ...restProps }) => {

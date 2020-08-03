@@ -5,7 +5,7 @@ import { Sides, Side } from 'types';
 import http from './http';
 
 const fecthPeople = async (id: Side): Promise<Side> => {
-  await http.get(`peoplse/${id}`);
+  await http.get(`people/${id}`);
   return id;
 };
 

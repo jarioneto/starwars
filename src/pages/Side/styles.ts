@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 interface Props {
-  loading: boolean;
+  entrace: 'animated' | 'static';
 }
 
 export const Container = styled.div<Props>`
@@ -12,12 +12,14 @@ export const Container = styled.div<Props>`
   background-color: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.secondary};
   padding-bottom: 50px;
-  animation: ${({ loading }) =>
-    loading ? undefined : 'fade 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both'};
+  animation: ${({ entrace }) =>
+    entrace !== 'animated' ? undefined : 'fade 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both'};
 
   > div:nth-child(2) {
-    animation: ${({ loading }) =>
-      loading ? undefined : 'showIn 0.8s cubic-bezier(0.230, 1.000, 0.320, 1.000) both'};
+    animation: ${({ entrace }) =>
+      entrace !== 'animated'
+        ? undefined
+        : 'showIn 0.8s cubic-bezier(0.230, 1.000, 0.320, 1.000) both'};
   }
 
   @keyframes fade {

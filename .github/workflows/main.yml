@@ -13,6 +13,8 @@ jobs:
       run: |
         yarn
         yarn build
+      env:
+        REACT_APP_API_URL: ${{ secrets.API_URL }}
   lint:
     runs-on: ubuntu-latest
     steps:
@@ -21,6 +23,8 @@ jobs:
       run: |
         yarn
         yarn lint
+      env:
+        REACT_APP_API_URL: ${{ secrets.API_URL }}
   coverage:
     runs-on: ubuntu-latest
     steps:
@@ -29,3 +33,5 @@ jobs:
       run: |
         yarn
         yarn coverage
+      env:
+        REACT_APP_API_URL: ${{ secrets.API_URL }}
