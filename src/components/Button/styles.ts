@@ -31,7 +31,7 @@ export const ButtonBase = styled.button.attrs((props) => ({
   }
 
   &:disabled {
-    cursor: not-allowed;
-    opacity: 0.6;
+    cursor: wait;
+    opacity: 0.8;
   }
 `;

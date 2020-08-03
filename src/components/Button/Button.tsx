@@ -11,7 +11,11 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const Button: FC<Props> = ({ loading, children, ...restProps }) => {
-  return <ButtonBase {...restProps}>{!loading ? children : <Loader />}</ButtonBase>;
+  return (
+    <ButtonBase {...restProps} disabled={loading}>
+      {!loading ? children : <Loader />}
+    </ButtonBase>
+  );
 };
 
 Button.defaultProps = {
