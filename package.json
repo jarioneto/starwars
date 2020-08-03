@@ -57,10 +57,12 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "<rootDir>/**/*.{ts,tsx}",
-      "!<rootDir>/**/*.d.ts",
-      "!<rootDir>/assets/**",
-      "!<rootDir>/index.tsx"
+      "src/**/*.{ts,tsx}",
+      "!src/**/*.d.ts",
+      "!src/assets/**",
+      "!src/types/**",
+      "!src/routes/**",
+      "!src/index.tsx"
     ],
     "coverageThreshold": {
       "global": {

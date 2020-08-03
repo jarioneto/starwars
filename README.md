@@ -4,7 +4,7 @@
 ![CI](https://github.com/jarioneto/starwars/workflows/CI/badge.svg?branch=master)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f1c268a8-67d4-4a2f-b546-2977f9bf64a9/deploy-status)](https://app.netlify.com/sites/iclinic-starwars/deploys)
 ![react](https://img.shields.io/github/package-json/dependency-version/jarioneto/starwars/react)
-![typescript](https://img.shields.io/github/package-json/dependency-version/jarioneto/starwars/dev/typescript)
+![typescript](https://img.shields.io/github/package-json/dependency-version/jarioneto/starwars/typescript)
 
 Aplicação desenvolvida em [ReactJS](https://pt-br.reactjs.org/) para consumo da API [Swapi](https://swapi.dev/)
 

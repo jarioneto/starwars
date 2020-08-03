@@ -7,8 +7,8 @@ export const ButtonBase = styled.button.attrs((props) => ({
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${({ theme }) => theme?.colors?.secondary || '#2C97D1'};
-  color: ${({ theme }) => theme?.colors?.primary || '#FFFFFF'};
+  background: ${({ theme }) => theme?.colors?.secondary};
+  color: ${({ theme }) => theme?.colors?.primary};
   height: 56px;
   padding: 2px 17px;
   border-radius: 10px;
