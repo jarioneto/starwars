@@ -48,7 +48,6 @@ export const Container = styled.div<Props>`
       transform: translateZ(0);
       transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
       transform-origin: 50% 100%;
-      filter: blur(20px);
       opacity: 0;
       will-change: transform;
     }
@@ -57,7 +56,6 @@ export const Container = styled.div<Props>`
       transform: translateZ(0);
       transform: translateY(0) scaleY(1) scaleX(1);
       transform-origin: 50% 50%;
-      filter: blur(0);
       opacity: 1;
       will-change: transform;
     }
