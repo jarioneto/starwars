@@ -3,12 +3,24 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: grid;
   grid-template-rows: repeat(2, 1fr);
+  animation: fadeInLeft 1s ease;
 
   > div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 `;
 

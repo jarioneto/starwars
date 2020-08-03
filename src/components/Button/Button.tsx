@@ -1,13 +1,21 @@
-import React, { ButtonHTMLAttributes } from 'react';
+import React, { FC, ButtonHTMLAttributes } from 'react';
 
+// Components
+import Loader from 'components/Loader';
+
+// Styles
 import { ButtonBase } from './styles';
 
-interface IProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  loading?: boolean;
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
+  loading: boolean;
 }
 
-const Button: React.FC<IProps> = ({ loading = false, children, ...rest }) => {
-  return <ButtonBase {...rest}>{!loading ? <>{children}</> : <div />}</ButtonBase>;
+const Button: FC<Props> = ({ loading, children, ...restProps }) => {
+  return <ButtonBase {...restProps}>{!loading ? children : <Loader />}</ButtonBase>;
 };
+
+Button.defaultProps = {
+  loading: false
+} as Partial<Props>;
 
 export default Button;

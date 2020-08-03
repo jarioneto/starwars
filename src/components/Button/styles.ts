@@ -10,13 +10,24 @@ export const ButtonBase = styled.button.attrs((props) => ({
   background: ${({ theme }) => theme?.colors?.secondary || '#2C97D1'};
   color: ${({ theme }) => theme?.colors?.primary || '#FFFFFF'};
   height: 56px;
+  padding: 2px 17px;
   border-radius: 10px;
   border: none;
   cursor: pointer;
   font-weight: bold;
+  transition: transform 0.7s;
+  -webkit-font-smoothing: subpixel-antialiased;
+  backface-visibility: hidden;
 
-  &:before {
-    background: rgba(0, 0, 0, 0.2);
+  > div,
+  div > div {
+    width: 20px;
+    height: 20px;
+    border-width: 3px;
+  }
+
+  &:hover {
+    transform: perspective(1px) scale(1.1);
   }
 
   &:disabled {

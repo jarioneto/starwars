@@ -9,7 +9,8 @@ export default createGlobalStyle`
 
   body {
     font-family: 'Montserrat', sans-serif;
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: subpixel-antialiased;
+    backface-visibility: hidden;
   }
 
   button,

@@ -24,19 +24,19 @@ const Home: FC = () => {
   const context = useContext(SideContext.Context);
   const history = useHistory();
 
-  const handleClick = () => {
+  const handleStart = () => {
     setLoading(true);
 
     fetchSide()
-      .then((side) => {
-        context?.setSide?.(side);
+      .then((data) => {
+        context?.setSide?.(data);
+        setLoading(false);
+
         history.push('/side');
       })
       .catch(() => {
-        toast('Error, try again');
-      })
-      .then(() => {
         setLoading(false);
+        toast('Error, try again');
       });
   };
 
@@ -49,7 +49,7 @@ const Home: FC = () => {
         <h5>Frontend Challenge</h5>
       </Content>
       <Footer>
-        <Button loading={loading} onClick={handleClick}>
+        <Button loading={loading} onClick={handleStart}>
           Start
         </Button>
       </Footer>
