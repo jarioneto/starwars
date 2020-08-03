@@ -48,8 +48,8 @@ describe('Home component', () => {
     renderComponent();
 
     expect(screen.getByRole('button')).toBeInTheDocument();
-    expect(screen.getByText(/welcome to/i)).toBeInTheDocument();
-    expect(screen.getByText(/frontend challenge/i)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /welcome to iclinic/i })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /frontend challenge/i })).toBeInTheDocument();
   });
 
   test('Should fetch people on click start button', async () => {
