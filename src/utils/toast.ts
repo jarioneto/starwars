@@ -1,7 +1,7 @@
 import { toast } from 'react-toastify';
 
 const toastAlert = (message: string): void => {
-  toast(message, {
+  toast.error(message, {
     position: 'bottom-right',
     autoClose: 5000,
     hideProgressBar: true,

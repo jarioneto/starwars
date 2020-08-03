@@ -13,6 +13,7 @@ import SideContext from 'contexts/SideContext';
 // Styles
 import Styles from 'styles/main';
 import theme from 'styles/theme';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App: React.FC = () => {
   return (
